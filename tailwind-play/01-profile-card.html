@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Profile Card: entendendo utility-first</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="min-h-screen bg-slate-950 p-6 text-slate-100">
+  <section class="mx-auto max-w-xl">
+    <header class="space-y-1">
+      <span class="text-[11px] font-semibold tracking-[0.2em] text-indigo-400 uppercase">
+        Tailwind Play
+      </span>
+      <h1 class="text-2xl font-bold tracking-tight">Profile Card</h1>
+      <p class="text-sm text-slate-400">
+        Utility-first: spacing, sizing, tipografia, cores, bordas e sombras.
+      </p>
+    </header>
+
+    <article
+      class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg shadow-black/20"
+    >
+      <div class="flex items-center gap-4">
+        <span
+          class="grid size-14 shrink-0 place-items-center rounded-full bg-indigo-600 text-lg font-bold text-white"
+        >
+          FC
+        </span>
+
+        <div class="min-w-0">
+          <span
+            class="inline-flex items-center rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-xs font-bold tracking-wide text-indigo-300 uppercase"
+          >
+            Front-End
+          </span>
+          <h2 class="mt-1.5 truncate text-lg font-bold">Florisponfildo Mello Costa</h2>
+          <p class="text-sm text-slate-400">Dev · React · SPA</p>
+        </div>
+      </div>
+
+      <p class="mt-5 text-sm text-slate-300">
+        Estudando como pequenas utilities podem ser combinadas para construir
+        interfaces.
+      </p>
+
+      <div class="mt-5 flex flex-wrap gap-3">
+        <button
+          type="button"
+          class="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
+        >
+          Seguir
+        </button>
+
+        <button
+          type="button"
+          class="rounded-lg bg-slate-800 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-slate-700 focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
+        >
+          Perfil
+        </button>
+      </div>
+    </article>
+  </section>
+</main>
+  </body>
+</html>

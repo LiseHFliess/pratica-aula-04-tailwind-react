@@ -16,7 +16,7 @@ export default defineConfig({
       input: {
         board: root('./index.html'),
         play: lab('index.html'),
-        'play-01': lab('01-button-spacing.html'),
+        'play-01': lab('01-profile-card.html'),
         'play-02': lab('02-product-grid.html'),
         'play-03': lab('03-theme-lab.html'),
         'play-04': lab('04-login-form.html'),

@@ -22,7 +22,7 @@ npm run dev
 
 | # | Laboratório | Arquivo | URL no dev server |
 |---|---|---|---|
-| 01 | Button & spacing | [`tailwind-play/01-button-spacing.html`](./tailwind-play/01-button-spacing.html) | `/tailwind-play/01-button-spacing.html` |
+| 01 | Profile Card | [`tailwind-play/01-profile-card.html`](./tailwind-play/01-profile-card.html) | `/tailwind-play/01-profile-card.html` |
 | 02 | Product Grid | [`tailwind-play/02-product-grid.html`](./tailwind-play/02-product-grid.html) | `/tailwind-play/02-product-grid.html` |
 | 03 | Theme Lab | [`tailwind-play/03-theme-lab.html`](./tailwind-play/03-theme-lab.html) | `/tailwind-play/03-theme-lab.html` |
 | 04 | Login Form | [`tailwind-play/04-login-form.html`](./tailwind-play/04-login-form.html) | `/tailwind-play/04-login-form.html` |
@@ -40,7 +40,7 @@ próprio `src/tailwind.css`.
 
 **Índice**
 
-1. [Button — tamanho, spacing e foco](#01--button--tamanho-spacing-e-foco)
+1. [Profile Card — entendendo utility-first](#01--profile-card-entendendo-utility-first)
 2. [Product Grid — estados e responsividade](#02--product-grid--estados-e-responsividade)
 3. [Theme Lab — tokens, dark mode e @layer](#03--theme-lab--tokens-dark-mode-e-layer)
 4. [Login Form — focus e acessibilidade](#04--login-form--focus-e-acessibilidade)
@@ -52,12 +52,13 @@ próprio `src/tailwind.css`.
 
 ---
 
-## 01 — Button: tamanho, spacing e foco
+## 01 — Profile Card: entendendo utility-first
 
-> O enunciado deste laboratório chegou apenas com as perguntas finais
-> (`size-20`, `flex-1`) e a lista de documentação (Padding, Margin, Width, Flex,
-> Border Radius, Box Shadow). O HTML abaixo foi reconstruído a partir desses
-> tópicos: um card com área quadrada de 80px, texto flexível e botão com sombra e foco.
+> Ponto de partida: nenhum componente, nenhuma abstração. Só utilities aplicadas
+> direto no markup, para sentir como espaçamento, tamanho, tipografia, cor, borda e
+> sombra se combinam.
+
+**Conceitos do enunciado:** utility-first, spacing, sizing, typography, colors, borders, shadows, flexbox
 
 ### CSS
 
@@ -69,34 +70,58 @@ próprio `src/tailwind.css`.
 
 ```html
 <main class="min-h-screen bg-slate-950 p-6 text-slate-100">
-  <section class="mx-auto flex max-w-2xl flex-col gap-6">
+  <section class="mx-auto max-w-xl">
     <header class="space-y-1">
       <span class="text-[11px] font-semibold tracking-[0.2em] text-indigo-400 uppercase">
         Tailwind Play
       </span>
-      <h1 class="text-2xl font-bold tracking-tight">Button &amp; spacing</h1>
+      <h1 class="text-2xl font-bold tracking-tight">Profile Card</h1>
+      <p class="text-sm text-slate-400">
+        Utility-first: spacing, sizing, tipografia, cores, bordas e sombras.
+      </p>
     </header>
 
     <article
-      class="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-lg shadow-black/20"
+      class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg shadow-black/20"
     >
-      <div
-        class="grid size-20 place-items-center rounded-2xl bg-indigo-500/10 text-2xl font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
-      >
-        01
+      <div class="flex items-center gap-4">
+        <span
+          class="grid size-14 shrink-0 place-items-center rounded-full bg-indigo-600 text-lg font-bold text-white"
+        >
+          FC
+        </span>
+
+        <div class="min-w-0">
+          <span
+            class="inline-flex items-center rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-xs font-bold tracking-wide text-indigo-300 uppercase"
+          >
+            Front-End
+          </span>
+          <h2 class="mt-1.5 truncate text-lg font-bold">Florisponfildo Mello Costa</h2>
+          <p class="text-sm text-slate-400">Dev · React · SPA</p>
+        </div>
       </div>
 
-      <div class="min-w-0 flex-1">
-        <h2 class="text-base font-semibold">UI Foundations</h2>
-        <p class="text-sm text-slate-400">Layout, spacing, tipografia e cores.</p>
-      </div>
+      <p class="mt-5 text-sm text-slate-300">
+        Estudando como pequenas utilities podem ser combinadas para construir
+        interfaces.
+      </p>
 
-      <button
-        type="button"
-        class="h-11 shrink-0 rounded-xl bg-indigo-600 px-5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 focus-visible:outline-none active:scale-95"
-      >
-        Escolher
-      </button>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <button
+          type="button"
+          class="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
+        >
+          Seguir
+        </button>
+
+        <button
+          type="button"
+          class="rounded-lg bg-slate-800 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-slate-700 focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
+        >
+          Perfil
+        </button>
+      </div>
     </article>
   </section>
 </main>
@@ -104,50 +129,71 @@ próprio `src/tailwind.css`.
 
 ### Por que essas classes
 
-| Classe | O que resolved |
+| Classe | O que resolve |
 |---|---|
-| `min-h-screen` | Garante altura mínima da viewport (altura do `vh`). |
-| `mx-auto max-w-2xl` | Centraliza o conteúdo e limita a largura de leitura. |
-| `flex items-center gap-4` | Alinha área, texto e botão na horizontal com 16px de respiro. |
-| `size-20` | Define `width` **e** `height` com um único valor (`5rem` = 80px). |
-| `p-5` | Padding de 20px nos quatro lados. |
-| `rounded-2xl` | Raio de 16px. |
-| `shadow-lg shadow-black/20` | Sombra + cor dela com opacidade. |
-| `min-w-0 flex-1` | `flex-1` = `flex: 1 1 0%`; `min-w-0` impede que o texto force overflow. |
-| `h-11 px-5` | Altura fixa de 44px e padding horizontal de 20px (área de clique confortável). |
-| `transition active:scale-95` | Transição de 150ms e feedback de clique. |
-| `focus-visible:` + `ring-offset-2` | Anel de foco só no teclado, afastado 2px do botão. |
+| `mx-auto max-w-xl` | Centraliza o card e limita a largura de leitura. |
+| `rounded-2xl border border-slate-800` | Borda + raio: separa o card do fundo sem precisar de imagem. |
+| `p-6` | Padding interno de 24px — o respiro que faz o card "existir". |
+| `shadow-lg shadow-black/20` | Sombra com a cor explícita e 20% de opacidade (no escuro, sombra preta pura some). |
+| `flex items-center gap-4` | Avatar e texto lado a lado, alinhados pelo centro vertical, 16px de respiro. |
+| `size-14` | `width` e `height` iguais (56px) em uma classe — perfeito para avatar circular. |
+| `shrink-0` | Impede o avatar de ser esmagado quando o nome é longo. |
+| `min-w-0` | Deixa o bloco de texto encolher abaixo do conteúdo; sem isso o `truncate` não funciona. |
+| `truncate` | `overflow: hidden` + `text-overflow: ellipsis` + `white-space: nowrap` em uma classe. |
+| `text-xs font-bold tracking-wide uppercase` | Badge legível: tamanho pequeno + peso + espaço entre letras + caixa alta. |
+| `mt-1.5` / `mt-5` | Ritmo vertical: 6px entre badge e nome, 20px entre blocos. |
+| `flex flex-wrap gap-3` | Botões em linha que quebra quando falta espaço (telas estreitas). |
+| `transition-colors` + `hover:` | Resposta suave ao mouse. |
+| `focus-visible:ring-2` + `ring-offset-*` | Anel de foco só no teclado, afastado do botão pela cor do fundo. |
 
-### Perguntas do laboratório
+### Checkpoint
 
-**1. Por que `size-20` substitui `width` e `height`?**
+**1. O que muda ao escrever utility-first?**
 
-No Tailwind v4 `size-*` é um atalho que grava as duas propriedades de uma vez
-(`width: 5rem; height: 5rem`). Ele existe porque, para ícones, avatares e áreas
-quadradas, largura e altura são sempre iguais — duas classes (`w-20 h-20`)
-fariam o mesmo, mas com mais ruído. Em elementos que precisam de proporções
-diferentes, aí sim usamos `w-*`/`h-*` (ou `aspect-*`).
+O CSS deixa de ser um arquivo à parte com nomes inventados (`.card-profile`, `.card-profile__name`) e passa a ser a própria composição no markup. Ganha-se velocidade e previsibilidade (o estilo está onde o elemento está), ao custo de markup mais longo — que é resolvido depois com componentes (`Button`, `Badge`, `Avatar`), não com CSS novo.
 
-**2. O que `flex-1` faz no botão?**
+**2. Por que `size-14` e não `w-14 h-14`?**
 
-`flex-1` é o atalho de `flex: 1 1 0%`:
+No Tailwind v4 `size-*` grava `width` e `height` de uma vez. Para avatar, ícone e área quadrada as duas medidas são sempre iguais, então uma classe basta. Em elementos com proporções diferentes (um card 16:9, por exemplo) aí sim `w-*`/`h-*` ou `aspect-*`.
 
-- `flex-grow: 1` → o item **cresce** para ocupar o espaço livre do container;
-- `flex-shrink: 1` → pode **encolher** se faltar espaço;
-- `flex-basis: 0%` → o tamanho base é zero, então todo o espaço é distribuído.
+**3. Para que serve `min-w-0` no bloco de texto?**
 
-No botão dentro de um container `flex`, isso o faz esticar na direção do eixo
-principal: em `flex-row` ele cresce em largura (fica com a largura do container,
-parecido com `w-full`, mas dividindo o espaço com os irmãos); em `flex-col`, cresce
-em altura. No exemplo acima o `flex-1` está no **texto** — o botão tem
-`shrink-0` para não ser esmagado e manter o padding.
+Item flex tem `min-width: auto` por padrão, ou seja, nunca encolhe abaixo do conteúdo. Com um nome comprido, o texto empurraria o card e o `truncate` não cortaria nada. `min-w-0` libera o encolhimento e permite o `text-overflow: ellipsis`.
 
-> Diferença rápida: `w-full` = 100% do container (ignora os irmãos);
-> `flex-1` = divide o espaço que sobrou entre os itens flexíveis.
+**4. Por que o avatar tem `shrink-0`?**
+
+Porque no `flex` os itens podem encolher. O avatar precisa manter 56px para continuar redondo; o texto é quem deve ceder espaço.
+
+**5. Como borda, raio e sombra criam profundidade sem imagem?**
+
+`border` desenha o contorno, `rounded-2xl` amacia o canto e `shadow-lg` simula a luz criando uma cópia desfocada atrás do card. Juntos dão a sensação de camada — e custam zero requisição.
+
+**6. Por que `tracking-wide` e `uppercase` no badge?**
+
+Caixa alta com letras espaçadas é o padrão visual de rótulo curto: aumenta a legibilidade em tamanho pequeno (`text-xs`) e separa o badge do nome, que é texto normal.
+
+**7. Por que dois botões com pesos diferentes?**
+
+`Seguir` é a ação principal (fundo cheio, cor de marca) e `Perfil` é secundária (fundo neutro). A hierarquia vem de cor e contraste, não de tamanho — os dois têm a mesma altura e o mesmo padding.
+
+### Experiências
+
+- `p-6` → `p-8`: card mais arejado; `p-2` deixa tudo apertado.
+- `size-14` → `size-20`: avatar maior, o texto continua alinhado pelo centro.
+- `gap-4` → `gap-2`: avatar e texto quase colados (perde-se a leitura).
+- Remover `min-w-0`: o nome longo estoura o card e o `truncate` para de funcionar.
+- Remover `truncate`: o nome quebra em várias linhas e desalinha o bloco.
+- `rounded-2xl` → `rounded-none`: o card fica "quadrado", sem mudar o layout.
+- Remover `shadow-lg`: o card cola no fundo escuro (a borda ainda segura a forma).
+- `flex-wrap` → sem ele: os botões saem do card em telas estreitas.
+- Trocar `bg-indigo-600` por `bg-emerald-600` nos dois botões: muda a identidade sem tocar em espaçamento.
+- Navegar com Tab: o anel de foco aparece nos dois botões, na ordem do DOM.
 
 ---
 
 ## 02 — Product Grid: estados e responsividade
+
+**Conceitos do enunciado:** Grid, responsive, hover, focus, active, disabled, flexbox, utility-first
 
 ### CSS
 
@@ -304,6 +350,8 @@ em altura. No exemplo acima o `flex-1` está no **texto** — o botão tem
 ---
 
 ## 03 — Theme Lab: tokens, dark mode e @layer
+
+**Conceitos do enunciado:** Dark mode, @theme, @custom-variant, @layer, @apply, design tokens, colors, utility-first
 
 ### CSS (fornecido pelo laboratório)
 
@@ -475,6 +523,8 @@ sair do design system.
 
 ## 04 — Login Form: focus e acessibilidade
 
+**Conceitos do enunciado:** Utility-first, spacing, sizing, typography, colors, borders, focus, responsive
+
 ### CSS
 
 ```css
@@ -586,6 +636,8 @@ seja, só nos espaços entre irmãos. É diferente de `gap-4`, que exige
 ---
 
 ## 05 — Pricing Cards: composição e hierarquia
+
+**Conceitos do enunciado:** Utility-first, spacing, typography, colors, borders, shadows, flexbox, grid, responsive
 
 ### CSS
 
@@ -729,6 +781,8 @@ seja, só nos espaços entre irmãos. É diferente de `gap-4`, que exige
 
 ## 06 — Settings Toggle: peer e checked
 
+**Conceitos do enunciado:** Utility-first, flexbox, borders, colors, focus, responsive
+
 ### CSS
 
 ```css
@@ -829,6 +883,8 @@ cada lado = 20px de curso; com `transition-transform` isso vira o deslize.
 ---
 
 ## 07 — FAQ Accordion: details e open
+
+**Conceitos do enunciado:** Utility-first, spacing, typography, borders, colors
 
 ### CSS
 
@@ -933,6 +989,8 @@ exigiria JS e vários `aria-*` manuais.
 ---
 
 ## 08 — Dashboard Summary: Grid e composição
+
+**Conceitos do enunciado:** Utility-first, grid, flexbox, responsive, spacing, sizing, typography, colors, borders
 
 ### CSS
 
@@ -1061,6 +1119,8 @@ com `hover:`/`focus-visible:` — ou seja, o "kit" de card + tipografia + estado
 ---
 
 ## 09 — Theme Toggle Button: dark mode com um botão
+
+**Conceitos do enunciado:** Utility-first, dark mode, @theme, @custom-variant, design tokens, colors, hover, focus
 
 ### CSS (fornecido pelo laboratório)
 

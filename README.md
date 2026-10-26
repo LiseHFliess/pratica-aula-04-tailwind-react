@@ -43,7 +43,7 @@ Com o dev server no ar:
 9. Navbar responsiva
 10. Mini dashboard com dark mode
 
-**Laboratórios** (`tailwind-play/`): button e spacing, product grid, theme lab,
+**Laboratórios** (`tailwind-play/`): profile card, product grid, theme lab,
 login form, pricing cards, settings toggle, FAQ accordion, dashboard summary e
 theme toggle — cada um como página HTML executável. O código, a explicação das
 classes e as respostas dos checkpoints estão em
