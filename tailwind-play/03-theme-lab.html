@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Theme Lab: tokens, dark mode e @layer</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="min-h-screen bg-background p-6 text-foreground">
+  <header class="mx-auto max-w-4xl space-y-2">
+    <span class="text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
+      Theme Lab
+    </span>
+    <h1 class="text-3xl font-bold tracking-tight">Tailwind Design Tokens</h1>
+    <p class="text-sm text-muted">
+      O mesmo componente deverá funcionar com tokens do tema claro e escuro.
+    </p>
+  </header>
+
+  <div class="mx-auto mt-8 grid max-w-4xl gap-6 lg:grid-cols-2">
+    <!-- Tema claro (:root) -->
+    <section class="space-y-4 rounded-2xl border border-border bg-surface p-6 shadow-sm">
+      <span class="text-xs font-bold tracking-[0.16em] text-primary uppercase">Light</span>
+      <h2 class="text-xl font-semibold">Tema claro</h2>
+      <p class="text-sm text-muted">
+        Este bloco deve utilizar os valores definidos em :root.
+      </p>
+
+      <div class="rounded-xl border border-border bg-background p-4">
+        <strong class="text-sm">Surface token</strong>
+        <p class="mt-1 text-sm text-muted">Use background, surface, muted e border.</p>
+      </div>
+
+      <div class="custom-colors rounded-xl">Cor Chestnut customizada</div>
+
+      <button
+        type="button"
+        class="w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:outline-none"
+      >
+        Primary Button
+      </button>
+    </section>
+
+    <!-- Tema escuro (.dark) -->
+    <section class="dark space-y-4 rounded-2xl border border-border bg-surface p-6 shadow-sm">
+      <span class="text-xs font-bold tracking-[0.16em] text-primary uppercase">Dark</span>
+      <h2 class="text-xl font-semibold">Tema escuro</h2>
+      <p class="text-sm text-muted">
+        Este bloco deve utilizar os valores definidos em .dark.
+      </p>
+
+      <div class="rounded-xl border border-border bg-background p-4">
+        <strong class="text-sm">Surface token</strong>
+        <p class="mt-1 text-sm text-muted">
+          Observe como os tokens mudam mantendo as mesmas utilities.
+        </p>
+      </div>
+
+      <div class="custom-colors rounded-xl dark:rounded-none">Cor Chestnut customizada</div>
+
+      <button
+        type="button"
+        class="w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:outline-none dark:bg-chestnut"
+      >
+        Primary Button
+      </button>
+    </section>
+  </div>
+</main>
+  </body>
+</html>
