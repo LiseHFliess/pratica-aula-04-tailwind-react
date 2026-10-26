@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Login Form: focus e acessibilidade</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="grid min-h-screen place-items-center bg-slate-100 p-4">
+  <section class="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-900/5">
+    <h1 class="text-2xl font-bold tracking-tight text-slate-900">Welcome back</h1>
+    <p class="mt-1 text-sm text-slate-500">Entre na sua conta para continuar.</p>
+
+    <form class="mt-6 space-y-4">
+      <div class="space-y-1.5">
+        <label for="email" class="block text-xs font-semibold text-slate-700">E-mail</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="you@example.com"
+          class="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-sm text-slate-900 transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 focus:outline-none"
+        />
+      </div>
+
+      <div class="space-y-1.5">
+        <label for="password" class="block text-xs font-semibold text-slate-700">Senha</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="••••••••"
+          class="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-sm text-slate-900 transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 focus:outline-none"
+        />
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <label for="remember" class="flex cursor-pointer items-center gap-2 text-sm text-slate-600">
+          <input
+            id="remember"
+            type="checkbox"
+            checked
+            class="size-4 cursor-pointer accent-blue-600"
+          />
+          Lembrar de mim
+        </label>
+
+        <a
+          href="#"
+          class="rounded text-sm font-semibold text-blue-600 transition hover:underline focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:ring-offset-2 focus-visible:outline-none"
+        >
+          Esqueci minha senha
+        </a>
+      </div>
+
+      <button
+        type="submit"
+        class="h-12 w-full rounded-xl bg-blue-600 px-4 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-500 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.99]"
+      >
+        Sign In
+      </button>
+    </form>
+  </section>
+</main>
+  </body>
+</html>
