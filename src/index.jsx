@@ -1,6 +1,11 @@
 import ReactDOM from 'react-dom/client';
 
-import App from './App.jsx';
-import './index.css';
+import BoardApp from './board/BoardApp.jsx';
+import './tailwind.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+/*
+ * O simulador de investimentos (aula anterior) continua em src/App.jsx,
+ * com o CSS em src/index.css. Para visualizá-lo, troque a importação acima por
+ * `import App from './App.jsx'` e use `import './index.css'`.
+ */
+ReactDOM.createRoot(document.getElementById('root')).render(<BoardApp />);
