@@ -8,6 +8,7 @@ import Exercise06KpiCard from './sections/Exercise06KpiCard.jsx';
 import Exercise07PricingCard from './sections/Exercise07PricingCard.jsx';
 import Exercise08AlertNotification from './sections/Exercise08AlertNotification.jsx';
 import Exercise09ResponsiveNavbar from './sections/Exercise09ResponsiveNavbar.jsx';
+import Exercise10MiniDashboard from './sections/Exercise10MiniDashboard.jsx';
 
 /**
  * Cada item registra um exercício na página única do board.
@@ -23,6 +24,7 @@ const exercises = [
   { id: 'ex07', number: '07', label: 'Pricing Card', Component: Exercise07PricingCard },
   { id: 'ex08', number: '08', label: 'Alert / Notification', Component: Exercise08AlertNotification },
   { id: 'ex09', number: '09', label: 'Responsive Navbar', Component: Exercise09ResponsiveNavbar },
+  { id: 'ex10', number: '10', label: 'Mini Dashboard', Component: Exercise10MiniDashboard },
 ];
 
 function Hero() {
