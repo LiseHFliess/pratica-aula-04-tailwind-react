@@ -45,9 +45,7 @@ export default function ProductCard({
 
         {badge && (
           <span className="absolute top-4 left-4">
-            <Badge variant={badgeVariant} className="bg-white/90 backdrop-blur">
-              {badge}
-            </Badge>
+            <Badge variant={badgeVariant}>{badge}</Badge>
           </span>
         )}
       </div>
