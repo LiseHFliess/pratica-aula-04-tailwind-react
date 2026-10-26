@@ -22,9 +22,27 @@ npm run preview  # serve o build
 
 > Node 20.19+ (o Vite 7 exige essa versão mínima).
 
+Com o dev server no ar:
+
+- **Board em React** (os 10 exercícios): <http://localhost:5173/>
+- **Labs do Tailwind Play** (9 páginas HTML): <http://localhost:5173/tailwind-play/>
+
 ## Estrutura
 
 ```
+tailwind-play/                 # os 9 labs do Tailwind Play (HTML puro, executável)
+├── index.html                 # índice dos laboratórios
+├── play.css                   # tokens dos labs (@theme, .dark) + .custom-colors
+├── 01-button-spacing.html
+├── 02-product-grid.html
+├── 03-theme-lab.html
+├── 04-login-form.html
+├── 05-pricing-cards.html
+├── 06-settings-toggle.html
+├── 07-faq-accordion.html
+├── 08-dashboard-summary.html
+└── 09-theme-toggle.html
+
 src/
 ├── index.jsx                 # entrada: renderiza o board
 ├── tailwind.css              # @import "tailwindcss" + @theme + dark variant
@@ -147,9 +165,40 @@ mesmo arquivo (`sections/dashboard/DashboardOverview.jsx`). Já `KpiCard`,
 ## Tailwind Play
 
 Os 9 laboratórios (button, product grid, theme lab, login, pricing cards, toggle,
-FAQ, dashboard e theme toggle) estão documentados em
-[`TAILWIND_PLAY.md`](./TAILWIND_PLAY.md), com o código final, a explicação das
-classes e as respostas dos checkpoints.
+FAQ, dashboard e theme toggle) estão em `tailwind-play/`, **cada um como página HTML
+própria** servida pelo Vite — abra `/tailwind-play/` no dev server para o índice, ou
+o arquivo direto (`/tailwind-play/03-theme-lab.html`).
+
+O código final de cada um, a explicação das classes e as respostas dos checkpoints
+estão em [`TAILWIND_PLAY.md`](./TAILWIND_PLAY.md).
+
+Dois detalhes de organização:
+
+- As páginas usam `tailwind-play/play.css`, que redeclara os tokens dos labs 03 e 09
+  (`--color-background`, `--color-surface`, `--color-foreground`, `--color-muted`,
+  `--color-border`, `--color-chestnut`) e a classe `.custom-colors`. Essas definições
+  ficariam redundantes no board em React, então não entram em `src/tailwind.css`.
+- `vite.config.js` declara cada página como entrada do build (`rollupOptions.input`),
+  então `npm run build` gera `dist/tailwind-play/*.html` junto com o board.
+
+## Passo a passo do repositório
+
+O histórico foi construído etapa por etapa — `git log --oneline` mostra exatamente
+esta ordem, e cada commit tem o diff isolado da sua entrega (`git show <hash>`).
+
+| Etapa | Entrega | Commit |
+|---|---|---|
+| 0 | Simulador da aula anterior | `feat: simulador de investimentos em React` |
+| 1 | Tailwind v4 + casca do board | `chore: configura Tailwind CSS v4 e casca do component board` |
+| 2–11 | Exercícios 01 → 10, um commit por exercício | `feat: exercise 01 …` até `feat: exercise 10 …` |
+| 12 | Correção do badge do product card | `fix: badge do product card usa apenas as cores da variante` |
+| 13 | README | `docs: README com estrutura, decisoes e checklist dos 10 exercicios` |
+| 14 | `TAILWIND_PLAY.md` com os 9 labs | `docs: TAILWIND_PLAY.md com os 9 laboratorios e checkpoints` |
+| 15 | Fontes do Tailwind restritas | `fix: limita as fontes do Tailwind para nao gerar CSS dos exemplos em .md` |
+| 16 | Base dos labs (`play.css` + índice) | `chore: base dos labs do Tailwind Play` |
+| 17–25 | Labs 01 → 09, um commit por laboratório | `feat: lab 01 …` até `feat: lab 09 …` |
+| 26 | Labs no build do Vite | `chore: inclui os labs no build do Vite` |
+| 27 | Links e instruções dos labs | `docs: aponta os labs para as paginas executaveis em tailwind-play` |
 
 ## Simulador da aula anterior
 

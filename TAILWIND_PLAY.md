@@ -7,6 +7,37 @@ código final e a explicação das classes usadas.
 > decisões de classe e as respostas dos checkpoints. Todos usam **Tailwind CSS v4**
 > (`@import "tailwindcss"`), a mesma versão do projeto React em `src/`.
 
+## Executando localmente
+
+Cada laboratório também existe como **página HTML executável** em `tailwind-play/`,
+com o mesmo HTML final mostrado abaixo. Elas são servidas pelo próprio Vite:
+
+```bash
+npm install
+npm run dev
+```
+
+- Índice dos labs: <http://localhost:5173/tailwind-play/>
+- Board em React: <http://localhost:5173/>
+
+| # | Laboratório | Arquivo | URL no dev server |
+|---|---|---|---|
+| 01 | Button & spacing | [`tailwind-play/01-button-spacing.html`](./tailwind-play/01-button-spacing.html) | `/tailwind-play/01-button-spacing.html` |
+| 02 | Product Grid | [`tailwind-play/02-product-grid.html`](./tailwind-play/02-product-grid.html) | `/tailwind-play/02-product-grid.html` |
+| 03 | Theme Lab | [`tailwind-play/03-theme-lab.html`](./tailwind-play/03-theme-lab.html) | `/tailwind-play/03-theme-lab.html` |
+| 04 | Login Form | [`tailwind-play/04-login-form.html`](./tailwind-play/04-login-form.html) | `/tailwind-play/04-login-form.html` |
+| 05 | Pricing Cards | [`tailwind-play/05-pricing-cards.html`](./tailwind-play/05-pricing-cards.html) | `/tailwind-play/05-pricing-cards.html` |
+| 06 | Settings Toggle | [`tailwind-play/06-settings-toggle.html`](./tailwind-play/06-settings-toggle.html) | `/tailwind-play/06-settings-toggle.html` |
+| 07 | FAQ Accordion | [`tailwind-play/07-faq-accordion.html`](./tailwind-play/07-faq-accordion.html) | `/tailwind-play/07-faq-accordion.html` |
+| 08 | Dashboard Summary | [`tailwind-play/08-dashboard-summary.html`](./tailwind-play/08-dashboard-summary.html) | `/tailwind-play/08-dashboard-summary.html` |
+| 09 | Theme Toggle | [`tailwind-play/09-theme-toggle.html`](./tailwind-play/09-theme-toggle.html) | `/tailwind-play/09-theme-toggle.html` |
+
+As páginas usam um CSS próprio (`tailwind-play/play.css`) com os tokens dos labs
+03 e 09 (`--color-background`, `--color-surface`, `--color-foreground`,
+`--color-muted`, `--color-border`, `--color-chestnut`) e a classe `.custom-colors`.
+Isso mantém essas definições fora do bundle do board em React, que tem o seu
+próprio `src/tailwind.css`.
+
 **Índice**
 
 1. [Button — tamanho, spacing e foco](#01--button--tamanho-spacing-e-foco)
@@ -1206,8 +1237,10 @@ O botão vira um switch mantendo o mesmo `onclick`:
 ```
 
 > O knob anda sozinho porque `.dark` fica no `<html>`: o botão é descendente de
-> `.dark`, então `dark:translate-x-5` vale para ele. Nenhuma classe de tema é
-> trocada no JS — só a classe do `<html>`.
+> `.dark`, então `dark:translate-x-6` vale para ele. Nenhuma classe de tema é
+> trocada no JS — só a classe do `<html>`. O curso é de 24px porque o trilho tem
+> 56px (`w-14`), 4px de padding de cada lado (`px-1`) e o knob tem 24px (`size-6`):
+> 56 − 4 − 4 − 24 = 24px.
 
 Card, badge e alert usando apenas tokens:
 
@@ -1241,8 +1274,9 @@ Card, badge e alert usando apenas tokens:
 
 ## Fechamento
 
-- Os labs foram feitos em HTML puro no Tailwind Play; a versão React dos mesmos
-  padrões está em `src/board/` (ver [`README.md`](./README.md)).
+- Os labs foram feitos em HTML puro no Tailwind Play e estão versionados como páginas
+  executáveis em `tailwind-play/` (índice em `/tailwind-play/`); a versão React dos
+  mesmos padrões está em `src/board/` (ver [`README.md`](./README.md)).
 - Utilities que mais apareceram nos 9 labs: `grid`/`grid-cols-*` + breakpoints,
   `flex`/`items-center`/`justify-between`, `gap-*` e `space-y-*`, `rounded-*`,
   `border`/`border-*`, `bg-*`/`text-*` semânticos, `shadow-*`, `transition` e as
