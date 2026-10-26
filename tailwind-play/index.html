@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play — Board de Laboratórios</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body class="min-h-screen bg-slate-950 px-4 py-12 text-slate-100">
+    <main class="mx-auto max-w-4xl">
+      <header class="max-w-xl space-y-2">
+        <span class="text-[11px] font-semibold tracking-[0.2em] text-indigo-400 uppercase">
+          Tailwind Play
+        </span>
+        <h1 class="text-3xl font-bold tracking-tight">Board de Laboratórios</h1>
+        <p class="text-sm text-slate-400">
+          Os nove laboratórios implementados em HTML puro, do markup sem estilo até a
+          versão final com utilities, estados e responsividade.
+        </p>
+      </header>
+
+      <ul class="mt-10 grid gap-3 sm:grid-cols-2">
+        <li>
+          <a
+            href="./01-button-spacing.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              01
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Button & spacing
+              </strong>
+              <span class="text-xs text-slate-400">size-*, flex-1, sombra e foco</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./02-product-grid.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              02
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Product Grid
+              </strong>
+              <span class="text-xs text-slate-400">Grid, breakpoints, group-hover e disabled</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./03-theme-lab.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              03
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Theme Lab
+              </strong>
+              <span class="text-xs text-slate-400">@theme, tokens, @layer e @apply</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./04-login-form.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              04
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Login Form
+              </strong>
+              <span class="text-xs text-slate-400">focus, focus-visible, ring e accent-*</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./05-pricing-cards.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              05
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Pricing Cards
+              </strong>
+              <span class="text-xs text-slate-400">Grid, destaque com translate e mt-auto</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./06-settings-toggle.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              06
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Settings Toggle
+              </strong>
+              <span class="text-xs text-slate-400">peer, peer-checked, sr-only e absolute</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./07-faq-accordion.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              07
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                FAQ Accordion
+              </strong>
+              <span class="text-xs text-slate-400">details/summary e variante open:</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./08-dashboard-summary.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              08
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Dashboard Summary
+              </strong>
+              <span class="text-xs text-slate-400">lg:grid-cols-[2fr_1fr] e barras com flex-1</span>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="./09-theme-toggle.html"
+            class="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-4 transition hover:-translate-y-0.5 hover:border-indigo-500/60"
+          >
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 font-mono text-xs font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+            >
+              09
+            </span>
+            <span class="min-w-0 flex-1">
+              <strong class="block text-sm font-semibold group-hover:text-indigo-300">
+                Theme Toggle
+              </strong>
+              <span class="text-xs text-slate-400">classList.toggle('dark') e dark:hidden</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="mt-10 text-xs text-slate-500">
+        Documentação de cada laboratório (código, classes e checkpoints) em
+        <a href="../TAILWIND_PLAY.md" class="text-indigo-400 hover:underline">TAILWIND_PLAY.md</a>.
+        Board em React em <a href="/" class="text-indigo-400 hover:underline">/</a>.
+      </p>
+    </main>
+  </body>
+</html>

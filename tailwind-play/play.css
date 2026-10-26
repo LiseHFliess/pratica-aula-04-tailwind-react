@@ -1,0 +1,51 @@
+/*
+ * CSS dos laboratórios do Tailwind Play.
+ *
+ * Fica separado de src/tailwind.css porque os labs 03 e 09 definem tokens
+ * próprios (background/surface/foreground/muted/border/chestnut) e a classe
+ * .custom-colors — nada disso pertence ao board em React.
+ */
+@import 'tailwindcss' source(none);
+
+/* Só os HTMLs dos labs entram na varredura do Tailwind. */
+@source './*.html';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #2563eb;
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-chestnut: var(--chestnut);
+}
+
+:root {
+  --background: #ffffff;
+  --surface: #f4f4f5;
+  --foreground: #18181b;
+  --muted: #71717a;
+  --border: #e4e4e7;
+
+  --chestnut: #973f29;
+}
+
+.dark {
+  --background: #15155a;
+  --surface: #18181b;
+  --foreground: #fafafa;
+  --muted: #a1a1aa;
+  --border: #27272a;
+
+  --chestnut: #d9785f;
+}
+
+@layer components {
+  .custom-colors {
+    @apply bg-chestnut p-2 text-center text-2xl text-white;
+  }
+}
