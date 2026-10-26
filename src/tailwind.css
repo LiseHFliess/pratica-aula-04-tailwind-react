@@ -1,4 +1,11 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+
+/*
+ * Fontes explícitas: sem isso o Tailwind v4 varre o projeto inteiro (inclusive
+ * os .md) e gera CSS para classes que só existem em exemplos de documentação.
+ */
+@source '../index.html';
+@source './**/*.{js,jsx}';
 
 /*
  * Dark mode por classe: o exercício 10 renderiza o dashboard dentro de um
