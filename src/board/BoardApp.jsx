@@ -1,10 +1,13 @@
 import Sidebar from './ui/Sidebar.jsx';
+import Exercise01ButtonSystem from './sections/Exercise01ButtonSystem.jsx';
 
 /**
  * Cada item registra um exercício na página única do board.
  * `Component` já traz a própria casca (ExerciseSection) com número e título.
  */
-const exercises = [];
+const exercises = [
+  { id: 'ex01', number: '01', label: 'Button System', Component: Exercise01ButtonSystem },
+];
 
 function Hero() {
   return (
