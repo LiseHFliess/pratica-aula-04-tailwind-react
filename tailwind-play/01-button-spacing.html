@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Button: tamanho, spacing e foco</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="min-h-screen bg-slate-950 p-6 text-slate-100">
+  <section class="mx-auto flex max-w-2xl flex-col gap-6">
+    <header class="space-y-1">
+      <span class="text-[11px] font-semibold tracking-[0.2em] text-indigo-400 uppercase">
+        Tailwind Play
+      </span>
+      <h1 class="text-2xl font-bold tracking-tight">Button &amp; spacing</h1>
+    </header>
+
+    <article
+      class="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-lg shadow-black/20"
+    >
+      <div
+        class="grid size-20 place-items-center rounded-2xl bg-indigo-500/10 text-2xl font-bold text-indigo-300 ring-1 ring-indigo-500/30 ring-inset"
+      >
+        01
+      </div>
+
+      <div class="min-w-0 flex-1">
+        <h2 class="text-base font-semibold">UI Foundations</h2>
+        <p class="text-sm text-slate-400">Layout, spacing, tipografia e cores.</p>
+      </div>
+
+      <button
+        type="button"
+        class="h-11 shrink-0 rounded-xl bg-indigo-600 px-5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 focus-visible:outline-none active:scale-95"
+      >
+        Escolher
+      </button>
+    </article>
+  </section>
+</main>
+  </body>
+</html>
