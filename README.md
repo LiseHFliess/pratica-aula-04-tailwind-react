@@ -146,8 +146,10 @@ mesmo arquivo (`sections/dashboard/DashboardOverview.jsx`). Já `KpiCard`,
 
 ## Tailwind Play
 
-Os exercícios de laboratório (Tailwind Play) estão documentados em
-[`TAILWIND_PLAY.md`](./TAILWIND_PLAY.md).
+Os 9 laboratórios (button, product grid, theme lab, login, pricing cards, toggle,
+FAQ, dashboard e theme toggle) estão documentados em
+[`TAILWIND_PLAY.md`](./TAILWIND_PLAY.md), com o código final, a explicação das
+classes e as respostas dos checkpoints.
 
 ## Simulador da aula anterior
 
