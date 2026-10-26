@@ -1,6 +1,7 @@
 import Sidebar from './ui/Sidebar.jsx';
 import Exercise01ButtonSystem from './sections/Exercise01ButtonSystem.jsx';
 import Exercise02BadgeAvatar from './sections/Exercise02BadgeAvatar.jsx';
+import Exercise03ProfileCard from './sections/Exercise03ProfileCard.jsx';
 
 /**
  * Cada item registra um exercício na página única do board.
@@ -9,6 +10,7 @@ import Exercise02BadgeAvatar from './sections/Exercise02BadgeAvatar.jsx';
 const exercises = [
   { id: 'ex01', number: '01', label: 'Button System', Component: Exercise01ButtonSystem },
   { id: 'ex02', number: '02', label: 'Badge + Avatar', Component: Exercise02BadgeAvatar },
+  { id: 'ex03', number: '03', label: 'Profile Card', Component: Exercise03ProfileCard },
 ];
 
 function Hero() {
