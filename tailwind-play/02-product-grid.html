@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Product Grid: estados e responsividade</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="min-h-screen bg-slate-950 px-4 py-10 text-slate-100">
+  <section class="mx-auto max-w-6xl">
+    <header class="max-w-xl space-y-2">
+      <span class="text-[11px] font-semibold tracking-[0.2em] text-indigo-400 uppercase">
+        Tailwind Play
+      </span>
+      <h1 class="text-3xl font-bold tracking-tight">Product Grid Responsivo</h1>
+      <p class="text-sm text-slate-400">
+        Pratique breakpoints, Grid, hover, focus, active e disabled.
+      </p>
+    </header>
+
+    <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- 01 -->
+      <article
+        class="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-indigo-500/60 hover:shadow-indigo-500/10"
+      >
+        <div
+          class="relative grid aspect-[16/10] place-items-center overflow-hidden bg-linear-to-br from-indigo-500/20 via-slate-900 to-slate-900"
+        >
+          <span
+            class="absolute top-3 left-3 rounded-full bg-slate-950/60 px-2 py-0.5 text-[10px] font-bold tracking-[0.14em] text-indigo-300 uppercase ring-1 ring-indigo-500/30 ring-inset"
+          >
+            Starter
+          </span>
+          <span
+            class="text-5xl font-black text-indigo-400/40 transition duration-300 group-hover:scale-110 group-hover:text-indigo-300/70"
+            aria-hidden="true"
+          >
+            01
+          </span>
+        </div>
+
+        <div class="space-y-3 p-5">
+          <h2 class="text-lg font-semibold">UI Foundations</h2>
+          <p class="text-sm text-slate-400">Layout, spacing, tipografia e cores.</p>
+          <button
+            type="button"
+            class="w-full rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none active:scale-95"
+          >
+            Escolher
+          </button>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article
+        class="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/60 hover:shadow-emerald-500/10"
+      >
+        <div
+          class="relative grid aspect-[16/10] place-items-center overflow-hidden bg-linear-to-br from-emerald-500/20 via-slate-900 to-slate-900"
+        >
+          <span
+            class="absolute top-3 left-3 rounded-full bg-slate-950/60 px-2 py-0.5 text-[10px] font-bold tracking-[0.14em] text-emerald-300 uppercase ring-1 ring-emerald-500/30 ring-inset"
+          >
+            Intermediate
+          </span>
+          <span
+            class="text-5xl font-black text-emerald-400/40 transition duration-300 group-hover:scale-110 group-hover:text-emerald-300/70"
+            aria-hidden="true"
+          >
+            02
+          </span>
+        </div>
+
+        <div class="space-y-3 p-5">
+          <h2 class="text-lg font-semibold">Responsive UI</h2>
+          <p class="text-sm text-slate-400">Breakpoints e variantes condicionais.</p>
+          <button
+            type="button"
+            class="w-full rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-600/25 transition hover:bg-emerald-500 focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none active:scale-95"
+          >
+            Escolher
+          </button>
+        </div>
+      </article>
+
+      <!-- 03 (disabled) -->
+      <article
+        class="group overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/60 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1"
+      >
+        <div
+          class="relative grid aspect-[16/10] place-items-center overflow-hidden bg-linear-to-br from-slate-800 via-slate-900 to-slate-900"
+        >
+          <span
+            class="absolute top-3 left-3 rounded-full bg-slate-950/60 px-2 py-0.5 text-[10px] font-bold tracking-[0.14em] text-slate-400 uppercase ring-1 ring-slate-700 ring-inset"
+          >
+            Locked
+          </span>
+          <span
+            class="text-5xl font-black text-slate-600 transition duration-300 group-hover:scale-110"
+            aria-hidden="true"
+          >
+            03
+          </span>
+        </div>
+
+        <div class="space-y-3 p-5">
+          <h2 class="text-lg font-semibold text-slate-300">Advanced UI</h2>
+          <p class="text-sm text-slate-500">Este plano ainda está indisponível.</p>
+          <button
+            type="button"
+            disabled
+            class="w-full rounded-xl bg-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-300 transition disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            Indisponível
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+  </body>
+</html>
