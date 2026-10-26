@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Pricing Cards: composição e hierarquia</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="min-h-screen bg-slate-50 px-4 py-12">
+  <section class="mx-auto max-w-5xl">
+    <header class="mx-auto max-w-xl space-y-2 text-center">
+      <span class="text-[11px] font-semibold tracking-[0.2em] text-indigo-600 uppercase">
+        Pricing
+      </span>
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900">Escolha o plano ideal</h1>
+      <p class="text-sm text-slate-500">Compare recursos e preços.</p>
+    </header>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      <!-- Starter -->
+      <article
+        class="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg"
+      >
+        <h2 class="text-xs font-semibold tracking-[0.14em] text-slate-500 uppercase">Starter</h2>
+
+        <p class="mt-4 flex items-baseline gap-1">
+          <strong class="text-4xl font-extrabold tracking-tight text-slate-900">$0</strong>
+          <span class="text-sm text-slate-400">/ month</span>
+        </p>
+
+        <ul class="mt-6 space-y-2 border-t border-slate-100 pt-6 text-sm text-slate-600">
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-emerald-500">✓</span> Projects
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-emerald-500">✓</span> Basic support
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          class="mt-auto w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.99]"
+        >
+          Choose
+        </button>
+      </article>
+
+      <!-- Pro (destaque) -->
+      <article
+        class="relative flex h-full flex-col rounded-3xl border-2 border-indigo-500 bg-white p-6 shadow-xl shadow-indigo-500/10 transition hover:shadow-2xl lg:-translate-y-2"
+      >
+        <span
+          class="absolute -top-3 left-6 rounded-full bg-indigo-600 px-2.5 py-1 text-[10px] font-bold tracking-[0.08em] text-white uppercase"
+        >
+          Popular
+        </span>
+
+        <h2 class="text-xs font-semibold tracking-[0.14em] text-indigo-600 uppercase">Pro</h2>
+
+        <p class="mt-4 flex items-baseline gap-1">
+          <strong class="text-4xl font-extrabold tracking-tight text-slate-900">$29</strong>
+          <span class="text-sm text-slate-400">/ month</span>
+        </p>
+
+        <ul class="mt-6 space-y-2 border-t border-slate-100 pt-6 text-sm text-slate-600">
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-indigo-500">✓</span> Projects
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-indigo-500">✓</span> Analytics
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-indigo-500">✓</span> Priority support
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          class="mt-auto w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.99]"
+        >
+          Choose
+        </button>
+      </article>
+
+      <!-- Team -->
+      <article
+        class="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg"
+      >
+        <h2 class="text-xs font-semibold tracking-[0.14em] text-slate-500 uppercase">Team</h2>
+
+        <p class="mt-4 flex items-baseline gap-1">
+          <strong class="text-4xl font-extrabold tracking-tight text-slate-900">$79</strong>
+          <span class="text-sm text-slate-400">/ month</span>
+        </p>
+
+        <ul class="mt-6 space-y-2 border-t border-slate-100 pt-6 text-sm text-slate-600">
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-emerald-500">✓</span> Projects
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-emerald-500">✓</span> Analytics
+          </li>
+          <li class="flex items-center gap-2">
+            <span aria-hidden="true" class="text-emerald-500">✓</span> Team access
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          class="mt-auto w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.99]"
+        >
+          Choose
+        </button>
+      </article>
+    </div>
+  </section>
+</main>
+  </body>
+</html>
