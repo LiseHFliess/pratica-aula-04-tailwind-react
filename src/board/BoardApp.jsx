@@ -5,6 +5,7 @@ import Exercise03ProfileCard from './sections/Exercise03ProfileCard.jsx';
 import Exercise04ProductCard from './sections/Exercise04ProductCard.jsx';
 import Exercise05LoginForm from './sections/Exercise05LoginForm.jsx';
 import Exercise06KpiCard from './sections/Exercise06KpiCard.jsx';
+import Exercise07PricingCard from './sections/Exercise07PricingCard.jsx';
 
 /**
  * Cada item registra um exercício na página única do board.
@@ -17,6 +18,7 @@ const exercises = [
   { id: 'ex04', number: '04', label: 'Product Card', Component: Exercise04ProductCard },
   { id: 'ex05', number: '05', label: 'Login Form', Component: Exercise05LoginForm },
   { id: 'ex06', number: '06', label: 'KPI Card', Component: Exercise06KpiCard },
+  { id: 'ex07', number: '07', label: 'Pricing Card', Component: Exercise07PricingCard },
 ];
 
 function Hero() {
