@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Play · Settings Toggle: peer e checked</title>
+    <link rel="stylesheet" href="/tailwind-play/play.css" />
+  </head>
+  <body>
+<main class="min-h-screen bg-slate-950 px-4 py-12 text-slate-100">
+  <section class="mx-auto max-w-lg">
+    <h1 class="text-xl font-semibold tracking-tight">Notification Settings</h1>
+    <p class="mt-1 text-sm text-slate-400">Controle suas preferências de comunicação.</p>
+
+    <div class="mt-6 space-y-4">
+      <label
+        class="flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-800 bg-slate-900 p-4 transition hover:border-slate-700"
+      >
+        <span class="min-w-0">
+          <strong class="block text-sm font-semibold">Email notifications</strong>
+          <span class="text-xs text-slate-400">Receive product updates</span>
+        </span>
+
+        <span class="relative inline-flex shrink-0">
+          <input type="checkbox" checked class="peer sr-only" />
+          <span
+            class="h-6 w-11 rounded-full bg-slate-700 transition-colors peer-checked:bg-blue-600 peer-focus-visible:ring-2 peer-focus-visible:ring-blue-400 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-slate-950"
+          ></span>
+          <span
+            class="pointer-events-none absolute top-0.5 left-0.5 size-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5"
+          ></span>
+        </span>
+      </label>
+
+      <label
+        class="flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-800 bg-slate-900 p-4 transition hover:border-slate-700"
+      >
+        <span class="min-w-0">
+          <strong class="block text-sm font-semibold">Marketing</strong>
+          <span class="text-xs text-slate-400">Receive campaigns</span>
+        </span>
+
+        <span class="relative inline-flex shrink-0">
+          <input type="checkbox" class="peer sr-only" />
+          <span
+            class="h-6 w-11 rounded-full bg-slate-700 transition-colors peer-checked:bg-blue-600 peer-focus-visible:ring-2 peer-focus-visible:ring-blue-400 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-slate-950"
+          ></span>
+          <span
+            class="pointer-events-none absolute top-0.5 left-0.5 size-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5"
+          ></span>
+        </span>
+      </label>
+    </div>
+  </section>
+</main>
+  </body>
+</html>
